@@ -1,0 +1,10 @@
+{
+  "expo": {
+    "name": "gym-notion",
+    "slug": "gym-notion",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}

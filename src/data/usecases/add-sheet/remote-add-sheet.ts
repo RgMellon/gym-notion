@@ -1,7 +1,7 @@
 import { AddSheet, Params as AddSheetParams } from "../../../domain/usecases";
 import {
     HttpPostClient,
-  } from '../../../protocols/http'
+  } from '../../protocols/http'
 
 type Props = {
     url: string;

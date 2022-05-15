@@ -1,0 +1,38 @@
+{
+  "project_info": {
+    "project_number": "1082259016973",
+    "project_id": "gym-notion",
+    "storage_bucket": "gym-notion.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1082259016973:android:0f71f147a11ac5a1423444",
+        "android_client_info": {
+          "package_name": "com.gymnotion"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1082259016973-dchd11rh4rbj7qknrnbn74cs8v61nn22.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.gymnotion",
+            "certificate_hash": "5e8f16062ea3cd2c4a0d547876baa6f38cabf625"
+          }
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAi5Ck1cQXnun15N-kpXPiGwSIZ3poiAs0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

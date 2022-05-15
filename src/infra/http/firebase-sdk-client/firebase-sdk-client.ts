@@ -5,10 +5,10 @@ export function firebaseSdkClient(): HttpPostClient {
     return {
         post(params: HttpPostParams) {
             try {
-
+                
                 return Promise.resolve()
             } catch(err)   {
-                
+
             }
         }
     }

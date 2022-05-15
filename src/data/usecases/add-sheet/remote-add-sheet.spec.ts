@@ -2,7 +2,7 @@ import faker from 'faker';
 import { mockAddSheet } from '../../../domain/tests/mock-add-sheet';
 import { AddSheet } from '../../../domain/usecases';
 import { HttpPostClient } from '../../protocols/http';
-import {  httpPostClientSpy, httpPostClientSpyURl } from '../../test/mock-http';
+import {  httpPostClientSpy, httpPostClientSpybody, httpPostClientSpyURl } from '../../test/mock-http';
 import { remoteAddSheet } from './remote-add-sheet';
 
 type SutTypes = {
@@ -27,5 +27,14 @@ describe('RemoteAddSheet', () => {
       sut.add(mockAddSheet())
   
       expect(httpPostClientSpyURl).toBe(url)
+    })
+
+    it('should call HttpPostClient with correct Body', async () => {
+      const url = faker.internet.url()
+      const body = mockAddSheet()
+      const { sut } = makeSut(url)
+      sut.add(body)
+  
+      expect(httpPostClientSpybody).toBe(body)
     })
 })

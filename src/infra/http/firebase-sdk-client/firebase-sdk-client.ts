@@ -1,14 +1,13 @@
 import { HttpPostClient, HttpPostParams } from "../../../data/protocols/http";
-
+import  firestore from '@react-native-firebase/firestore'
 
 export function firebaseSdkClient(): HttpPostClient {
     return {
-        post(params: HttpPostParams) {
+        async post(params: HttpPostParams) {
             try {
-                
-                return Promise.resolve()
+                await firestore().collection('gym-notion').add(params.body)
             } catch(err)   {
-
+                console.log(err)
             }
         }
     }

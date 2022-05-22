@@ -3963,6 +3963,11 @@ find-yarn-workspace-root@~2.0.0:
   dependencies:
     micromatch "^4.0.2"
 
+firestore-jest-mock@^0.17.0:
+  version "0.17.0"
+  resolved "https://registry.yarnpkg.com/firestore-jest-mock/-/firestore-jest-mock-0.17.0.tgz#87380c604024021247c2aa32c852964d6b08fce0"
+  integrity sha512-LA2c6BDkqL6gu72tTeBnfrVuPtgiEDfyAY745I0PAyP1DI3+ciFsy8psmfGtkU6K9NR1Tj6jsal0c5BFi01IEQ==
+
 flow-parser@0.*:
   version "0.178.0"
   resolved "https://registry.yarnpkg.com/flow-parser/-/flow-parser-0.178.0.tgz#85d300e29b146b54cb79e277e092ffd401b05f0c"

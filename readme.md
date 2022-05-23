@@ -37,7 +37,7 @@ O projeto foi feito utilizando as seguintes tecnologias
 
 ---
 
-## 💻 Inspirações para o projeto
+## 💡 Inspirações para o projeto
 
 Cores e Layout
 

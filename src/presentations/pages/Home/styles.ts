@@ -1,9 +1,11 @@
-import styled from "styled-components/native";
+import styled, { css } from "styled-components/native";
 
 export const Container = styled.View`
-  flex: 1;
-  background-color: #eceff0;
-  align-items: center;
+  ${({ theme }) => css`
+    flex: 1;
+    background-color: ${theme.colors.background};
+    align-items: center;
+  `}
 `;
 
 export const Banner = styled.Image`

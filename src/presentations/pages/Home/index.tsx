@@ -9,7 +9,7 @@ export function Home() {
     <S.Container>
       <S.Banner
         source={{
-          uri: "https://img.freepik.com/free-photo/close-up-woman-training_23-2149036403.jpg?size=626&ext=jpg",
+          uri: "https://img.freepik.com/free-photo/woman-headphones-listens-music-does-warm-up-before-fitness-workout-purple-wall_197531-16613.jpg?size=626&ext=jpg&ga=GA1.2.295759449.1653268050",
         }}
       />
 

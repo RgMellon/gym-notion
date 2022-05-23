@@ -46,6 +46,7 @@ Cores e Layout
 Imagens
 
 - https://www.freepik.com/collection/burning-calories/1151?query=gym
+- https://www.freepik.com/search?color=purple&format=search&query=gym%20fitness%20woman&type=photo
 
 ---
 

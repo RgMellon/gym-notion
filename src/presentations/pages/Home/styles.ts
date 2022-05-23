@@ -1,23 +1,37 @@
 import styled, { css } from "styled-components/native";
 
-export const Container = styled.View`
+export const Container = styled.ScrollView`
   ${({ theme }) => css`
     flex: 1;
     background-color: ${theme.colors.background};
-    align-items: center;
   `}
 `;
 
 export const Banner = styled.Image`
   width: 100%;
-  height: 300px;
+  height: 350px;
 `;
 
 export const Content = styled.View`
-  width: 95%;
-  height: 100%;
-  border-radius: 22px;
-  padding-top: 50px;
-  padding-left: 20px;
-  padding-right: 20px;
+  ${({ theme }) => css`
+    width: 100%;
+    height: 100%;
+    padding-top: 40px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 22px;
+    background-color: ${theme.colors.background};
+
+    position: absolute;
+    top: 250px;
+  `}
+`;
+
+export const ContentTitle = styled.Text`
+  ${({ theme }) => css`
+    font-size: ${theme.fonts.size.xLarge};
+    color: ${theme.colors.text};
+    font-weight: bold;
+    margin-bottom: 10px;
+  `}
 `;

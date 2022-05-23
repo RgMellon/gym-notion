@@ -10,11 +10,11 @@ type TraineCardProps = {
 export function TraineCard({ title, image }: TraineCardProps) {
   return (
     <S.Container>
-      <S.Title>{title}</S.Title>
-
       <S.ContentImage>
         <S.Image source={{ uri: image }} />
       </S.ContentImage>
+
+      <S.Title>{title}</S.Title>
     </S.Container>
   );
 }

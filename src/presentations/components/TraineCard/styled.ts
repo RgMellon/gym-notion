@@ -1,12 +1,12 @@
 import styled, { css } from "styled-components/native";
 
-export const Container = styled.View`
+export const Container = styled.TouchableOpacity`
   ${({ theme }) => css`
     width: 100%;
     padding: 14px;
     background-color: ${theme.colors.backgroundLight};
     flex-direction: row;
-    justify-content: space-between;
+    align-items: center;
     border-radius: 15px;
     margin-top: 10px;
   `}
@@ -14,13 +14,15 @@ export const Container = styled.View`
 
 export const Title = styled.Text`
   ${({ theme }) => css`
-    font-size: 18px;
+    font-size: ${theme.fonts.size.medium};
     color: ${theme.colors.text};
     font-weight: bold;
   `}
 `;
 
-export const ContentImage = styled.View``;
+export const ContentImage = styled.View`
+  margin-right: 20px;
+`;
 
 export const Image = styled.Image`
   width: 90px;

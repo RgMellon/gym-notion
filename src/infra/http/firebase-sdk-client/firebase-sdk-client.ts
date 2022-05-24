@@ -5,7 +5,7 @@ export function firebaseSdkClient(): HttpPostClient {
     return {
         async post(params: HttpPostParams) {
             try {
-                await firestore().collection('gym-notion').add(params.body)
+                await firestore().collection(params.url).add(params.body)
             } catch(err)   {
                 console.log(err)
             }

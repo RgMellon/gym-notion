@@ -33,11 +33,11 @@ export const mocktHttpResponse = () => ({
 
 describe('FirebaseSdkClient', () => {
     describe('post', () => {
-        it('Should call firebase.post with correct values', async () => {
-            const request = mockPostRequest()
-            firebaseSdkClient().post({url:request.url,  body: request.body})
-            expect(firestore().collection('gym-notion')).toHaveBeenCalled()
+        // it('Should call firebase.post with correct values', async () => {
+        //     const request = mockPostRequest()
+        //     firebaseSdkClient().post({url:request.url,  body: request.body})
+        //     expect(firestore().collection('gym-notion')).toHaveBeenCalled()
           
-        })
+        // })
     })
 })

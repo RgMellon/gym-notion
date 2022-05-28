@@ -5,6 +5,7 @@ export default {
     backgroundLight: "#ffffff",
     text: "#56595c",
   },
+
   fonts: {
     size: {
       xLarge: "20px",
@@ -13,5 +14,12 @@ export default {
       small: "14px",
       xsmall: "12px",
     },
+  },
+
+  layers: {
+    base: 10,
+    overlay: 30,
+    modal: 40,
+    alwaysOnTop: 50,
   },
 };

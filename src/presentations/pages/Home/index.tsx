@@ -1,5 +1,6 @@
 import React from "react";
-import { Text } from "react-native";
+
+import { AddButton } from "../../components/AddButton";
 import { TrainingSheetCard } from "../../components/TrainingSheetCard";
 
 import * as S from "./styles";
@@ -15,6 +16,7 @@ export function Home() {
 
       <S.Content>
         <S.ContentTitle>Minhas Fichas</S.ContentTitle>
+        <AddButton />
         <TrainingSheetCard
           title="Treino A"
           image="https://img.freepik.com/free-photo/horizontal-shot-satisfied-motivated-sportswoman-has-regular-training-raises-arms-with-dumbbells-does-exercises-muscles-dressed-sportswear-smiles-toothily-isolated-pink-wall-sport-concept_273609-58641.jpg?size=626&ext=jpg"

@@ -17,17 +17,52 @@ export function Home() {
         <S.ContentTitle>Minhas Fichas</S.ContentTitle>
         <TraineCard
           title="Treino A"
-          image="https://img.freepik.com/free-photo/full-shot-man-training-with-dumbbell_23-2149036375.jpg?size=338&ext=jpg"
+          image="https://img.freepik.com/free-photo/horizontal-shot-satisfied-motivated-sportswoman-has-regular-training-raises-arms-with-dumbbells-does-exercises-muscles-dressed-sportswear-smiles-toothily-isolated-pink-wall-sport-concept_273609-58641.jpg?size=626&ext=jpg"
         />
 
         <TraineCard
           title="Treino B"
-          image="https://img.freepik.com/free-photo/horizontal-shot-satisfied-motivated-sportswoman-has-regular-training-raises-arms-with-dumbbells-does-exercises-muscles-dressed-sportswear-smiles-toothily-isolated-pink-wall-sport-concept_273609-58641.jpg?size=626&ext=jpg"
+          image="https://img.freepik.com/free-photo/muscular-young-gentleman-pumping-up-biceps_7502-9050.jpg?size=626&ext=jpg&uid=R7440404&ga=GA1.2.295759449.1653268050"
         />
 
         <TraineCard
           title="Treino C"
           image="https://img.freepik.com/free-photo/young-caucasian-plus-size-female-model-s-training-gradient-purple-green-wall_155003-40612.jpg?size=626&ext=jpg&uid=R7440404&ga=GA1.2.295759449.1653268050"
+        />
+
+        <TraineCard
+          title="Treino D"
+          image="https://img.freepik.com/free-photo/stylish-young-male-athlete-practicing-white-studio-background-portrait-with-shadows-sportive-fit-model-works-out-motion-action_155003-21861.jpg?size=338&ext=jpg&uid=R7440404&ga=GA1.2.295759449.1653268050"
+        />
+
+        <TraineCard
+          title="Treino E"
+          image="https://img.freepik.com/free-photo/beautiful-young-female-athlete-practicing-red_155003-40975.jpg?size=626&ext=jpg&uid=R7440404&ga=GA1.2.295759449.1653268050"
+        />
+
+        <TraineCard
+          title="Treino F"
+          image="https://img.freepik.com/free-photo/sportive-young-man-training-with-weight-barbell-isolated-white-studio-background-situps_155003-45718.jpg?size=626&ext=jpg&uid=R7440404&ga=GA1.2.295759449.1653268050"
+        />
+
+        <TraineCard
+          title="Treino G"
+          image="https://img.freepik.com/free-photo/portrait-curly-brunette-woman-doing-exercises-purple-wall_197531-16656.jpg?size=626&ext=jpg&uid=R7440404&ga=GA1.2.295759449.1653268050"
+        />
+
+        <TraineCard
+          title="Treino H"
+          image="https://img.freepik.com/free-photo/young-caucasian-man-bright-clothes-training-blue-background-concept-sport-human-emotions-facial-expression-healthy-lifestyle-youth-sales-doing-stretching-exercises-copyspace_155003-30665.jpg?size=626&ext=jpg&uid=R7440404&ga=GA1.2.295759449.1653268050"
+        />
+
+        <TraineCard
+          title="Treino I"
+          image="https://img.freepik.com/free-photo/full-shot-man-training-with-dumbbell_23-2149036375.jpg?size=338&ext=jpg"
+        />
+
+        <TraineCard
+          title="Treino J"
+          image="https://img.freepik.com/free-photo/woman-training-with-kettlebell-full-shot_23-2149338009.jpg?size=338&ext=jpg&uid=R7440404&ga=GA1.2.295759449.1653268050"
         />
       </S.Content>
     </S.Container>

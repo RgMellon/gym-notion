@@ -2,7 +2,6 @@ import styled, { css } from "styled-components/native";
 
 export const Container = styled.ScrollView`
   ${({ theme }) => css`
-    flex: 1;
     background-color: ${theme.colors.background};
   `}
 `;
@@ -15,7 +14,6 @@ export const Banner = styled.Image`
 export const Content = styled.View`
   ${({ theme }) => css`
     width: 100%;
-    height: 100%;
     padding-top: 40px;
     padding-left: 20px;
     padding-right: 20px;

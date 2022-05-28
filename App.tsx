@@ -1,12 +1,8 @@
 import React from "react";
 
 import { Theme } from "./src/presentations/templates";
-import { Home } from "./src/presentations/pages/Home";
+import { makeAddSheet } from "./src/main/factories/pages/add-sheet/add-sheet-factory";
 
 export default function App() {
-  return (
-    <Theme>
-      <Home />
-    </Theme>
-  );
+  return <Theme>{makeAddSheet()}</Theme>;
 }

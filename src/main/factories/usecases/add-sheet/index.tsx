@@ -7,6 +7,6 @@ import { makeFirebaseSdkClient } from "../../http/firebase-sdk-client.factory";
 export function makeRemoteAddSheet(): AddSheet  {
     return remoteAddSheet({
         url: 'gym-notion',
-        httpPostClient: makeFirebaseSdkClient()
+        httpClient: makeFirebaseSdkClient()
     })
 }

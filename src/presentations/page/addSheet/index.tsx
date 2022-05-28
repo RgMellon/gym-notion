@@ -1,13 +1,23 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Text, TouchableOpacity, View } from 'react-native';
 import { AddSheet } from '../../../domain/usecases';
+import { LoadSheet } from '../../../domain/usecases/load-sheet';
 
 type Props = {
-    addSheet: AddSheet
+  loadSheet: LoadSheet
+  addSheet: AddSheet
 };
 
-export function AddSheetPage({addSheet}: Props) {
-    
+export function AddSheetPage({addSheet, loadSheet}: Props) {
+
+    useEffect(() => {
+      async function getSheets() {
+        const response  = await loadSheet.load()
+        console.log(response)
+      }
+
+      getSheets()
+    }, [])
     async function handleSubmit() {
       try {
          const t = await addSheet.add({

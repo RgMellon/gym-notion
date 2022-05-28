@@ -1,5 +1,3 @@
-// import { HttpResponse } from '.'
-
 export type HttpPostParams = {
   url?: string
   body?: any

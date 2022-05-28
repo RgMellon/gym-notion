@@ -5,15 +5,13 @@ import {
 
 type Props = {
     url: string;
-    httpPostClient: HttpPostClient
+    httpClient: HttpPostClient
 }
 
-export function remoteAddSheet({ url, httpPostClient }: Props):  AddSheet {
+export function remoteAddSheet({ url, httpClient }: Props):  AddSheet {
     return {
         async add(params: AddSheetParams) {
-            const httpResponse = await httpPostClient.post({ url, body: params })
-
-            // console.log(httpResponse)
+            await httpClient.post({ url, body: params })
         }
     }
 }

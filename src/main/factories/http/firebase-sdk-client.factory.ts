@@ -1,8 +1,6 @@
-import { firebaseSdkClient } from "../../../infra/http/firebase-sdk-client/firebase-sdk-client";
-import { HttpPostClient } from "../../../data/protocols/http";
+import { Client, firebaseSdkClient } from "../../../infra/http/firebase-sdk-client/firebase-sdk-client";
 
 
-
-export const makeFirebaseSdkClient = (): HttpPostClient => {
+export const makeFirebaseSdkClient = (): Client => {
   return firebaseSdkClient()
 }

@@ -12,7 +12,7 @@ type SutTypes = {
   
   const makeSut = (url: string = faker.internet.url()): SutTypes => {
     const httpPostClient = httpPostClientSpy();
-    const sut = remoteAddSheet({url, httpPostClient})
+    const sut = remoteAddSheet({url, httpClient: httpPostClient})
   
     return {
         sut,

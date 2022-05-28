@@ -7,8 +7,12 @@ export const Container = styled.TouchableOpacity`
     height: 60px;
     border-radius: 30px;
     background-color: ${theme.colors.primary};
+
+    justify-content: center;
+    align-items: center;
+
     position: absolute;
-    top: 550px;
+    bottom: -80px;
     right: 20px;
     z-index: ${theme.layers.alwaysOnTop};
   `}

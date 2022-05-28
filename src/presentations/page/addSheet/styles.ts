@@ -34,9 +34,9 @@ export const Content = styled.View`
 
 export const ContentTitle = styled.Text`
   ${({ theme }) => css`
+    font-family: ${theme.fonts.bold};
     font-size: ${theme.fonts.size.xLarge};
     color: ${theme.colors.text};
-    font-weight: bold;
     margin-bottom: 10px;
   `}
 `;

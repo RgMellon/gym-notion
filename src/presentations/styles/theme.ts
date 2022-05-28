@@ -7,6 +7,10 @@ export default {
   },
 
   fonts: {
+    regular: "Manrope_300Light",
+    medium: "Manrope_500Medium",
+    bold: "Manrope_700Bold",
+
     size: {
       xLarge: "20px",
       large: "18px",

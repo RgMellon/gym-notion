@@ -13,14 +13,17 @@ type Props = {
 };
 
 export function AddSheetPage({ addSheet, loadSheet }: Props) {
+  
   useEffect(() => {
     async function getSheets() {
       const response = await loadSheet.load();
-      console.log(response);
+      // TODO : salvar em um state o retorno
     }
 
     getSheets();
   }, []);
+
+
   async function handleSubmit() {
     try {
       const t = await addSheet.add({
@@ -40,11 +43,13 @@ export function AddSheetPage({ addSheet, loadSheet }: Props) {
         }}
       />
 
+      <S.Detail />
       <S.Content>
         <S.ContentTitle>Minhas Fichas</S.ContentTitle>
 
         <AddButton />
 
+        {/* TODO : Listar do state */}
         <TrainingSheetCard
           title="Treino A"
           image="https://img.freepik.com/free-photo/horizontal-shot-satisfied-motivated-sportswoman-has-regular-training-raises-arms-with-dumbbells-does-exercises-muscles-dressed-sportswear-smiles-toothily-isolated-pink-wall-sport-concept_273609-58641.jpg?size=626&ext=jpg"

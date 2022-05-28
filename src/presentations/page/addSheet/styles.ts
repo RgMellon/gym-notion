@@ -11,17 +11,23 @@ export const Banner = styled.Image`
   height: 350px;
 `;
 
+export const Detail = styled.View`
+  ${({ theme }) => css`
+    width: 100%;
+    height: 20px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    background-color: ${theme.colors.background};
+    margin-top: -20px;
+  `}
+`;
+
 export const Content = styled.View`
   ${({ theme }) => css`
     width: 100%;
-    padding-top: 40px;
     padding-left: 20px;
     padding-right: 20px;
-    border-radius: 22px;
     background-color: ${theme.colors.background};
-
-    position: absolute;
-    top: 250px;
   `}
 `;
 

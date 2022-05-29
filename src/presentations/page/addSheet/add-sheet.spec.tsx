@@ -25,6 +25,20 @@ const makeSut = (): SutTypes => {
 }
 
 describe("AddSheetPage", () => {
+
+  it('Should call LoadSheet', async () => {
+    const { sut } = makeSut()
+    expect(loadSheetCallsCount).toBe(1)
+    await waitFor(() => sut.getByTestId('button'))
+  })
+
+  it("should render an add button", async () => {
+    const {sut} = makeSut()
+    const button = sut.getByTestId('button')
+    expect(button).toBeTruthy()
+    await waitFor(() => button)
+  });
+
   it("should render an add button", async () => {
     const {sut} = makeSut()
     const button = sut.getByTestId('button')

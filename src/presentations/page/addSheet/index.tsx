@@ -4,7 +4,7 @@ import { AddSheet } from "../../../domain/usecases";
 import { LoadSheet, Model } from "../../../domain/usecases/load-sheet";
 
 import { AddButton } from "../../components/AddButton";
-import { TrainingSheetCard } from "../../components/TrainingSheetCard";
+import { Card } from "../../components/Card";
 
 import * as S from "./styles";
 
@@ -51,11 +51,7 @@ export function AddSheetPage({ addSheet, loadSheet }: Props) {
         <AddButton />
 
         {listSheet.map((sheet) => (
-          <TrainingSheetCard
-            key={sheet.title}
-            title={sheet.title}
-            image={sheet.image}
-          />
+          <Card key={sheet.title} title={sheet.title} image={sheet.image} />
         ))}
       </S.Content>
     </S.Container>

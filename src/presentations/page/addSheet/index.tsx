@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from "react";
+import { Modal } from "react-native";
 
 import { AddSheet } from "../../../domain/usecases";
 import { LoadSheet, Model } from "../../../domain/usecases/load-sheet";
 
 import { AddButton } from "../../components/AddButton";
 import { Card } from "../../components/Card";
+import { AddTrainingSheetModal } from "../../components/AddTrainingSheetModal";
 
 import * as S from "./styles";
 
@@ -14,6 +16,7 @@ type Props = {
 };
 
 export function AddSheetPage({ addSheet, loadSheet }: Props) {
+  const [isOpenModal, setIsOpenModal] = useState(false);
   const [listSheet, setListSheet] = useState<Model[]>([]);
 
   useEffect(() => {
@@ -36,6 +39,11 @@ export function AddSheetPage({ addSheet, loadSheet }: Props) {
     }
   }
 
+  function handleToggleAddTrainingSheetModal() {
+    console.log(isOpenModal);
+    setIsOpenModal(!isOpenModal);
+  }
+
   return (
     <S.Container>
       <S.Banner
@@ -48,7 +56,17 @@ export function AddSheetPage({ addSheet, loadSheet }: Props) {
       <S.Content>
         <S.ContentTitle>Minhas Fichas</S.ContentTitle>
 
-        <AddButton />
+        <AddButton onPress={handleToggleAddTrainingSheetModal} />
+        <Modal
+          animationType="slide"
+          transparent={true}
+          visible={isOpenModal}
+          onRequestClose={handleToggleAddTrainingSheetModal}
+        >
+          <AddTrainingSheetModal
+            handleToggleModal={handleToggleAddTrainingSheetModal}
+          />
+        </Modal>
 
         {listSheet.map((sheet) => (
           <Card key={sheet.title} title={sheet.title} image={sheet.image} />

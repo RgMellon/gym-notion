@@ -2,12 +2,12 @@ import React from "react";
 
 import * as S from "./styled";
 
-type TrainingSheetCardProps = {
+type CardProps = {
   title: string;
   image: string;
 };
 
-export function TrainingSheetCard({ title, image }: TrainingSheetCardProps) {
+export function Card({ title, image }: CardProps) {
   return (
     <S.Container>
       <S.ContentImage>

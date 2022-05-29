@@ -1,15 +1,13 @@
 import { render } from "../../../utils/test.utils";
 
-import { TrainingSheetCard } from ".";
+import { Card } from ".";
 import { mockAddSheet } from "../../../domain/tests/mock-add-sheet";
 
 const { title, image } = mockAddSheet();
 
-describe("TrainingSheetCard", () => {
+describe("Card", () => {
   it("should render an image", () => {
-    const { getByTestId } = render(
-      <TrainingSheetCard title={title} image={image} />
-    );
+    const { getByTestId } = render(<Card title={title} image={image} />);
 
     const finddedImage = getByTestId("image");
 
@@ -18,9 +16,7 @@ describe("TrainingSheetCard", () => {
   });
 
   it("should render a title", () => {
-    const { getByTestId } = render(
-      <TrainingSheetCard title={title} image={image} />
-    );
+    const { getByTestId } = render(<Card title={title} image={image} />);
 
     const finddedTitle = getByTestId("title");
 

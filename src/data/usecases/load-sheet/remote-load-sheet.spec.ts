@@ -5,7 +5,7 @@ import { HttpGetClient } from '../../protocols/http';
 import { remoteLoadSheet } from '.';
 import {  LoadSheet, Model } from '../../../domain/usecases/load-sheet';
 import { httpGetClientSpy, httpGettClientSpyURl } from '../../test';
-import { mockRemoteSheetListModel } from '../../../domain/tests/mock-remote-sheet-list';
+import { mockRemoteSheetListModel } from '../../../domain/tests/mock-sheet-list';
 
 type SutTypes = {
     sut: LoadSheet,

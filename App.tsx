@@ -1,18 +1,26 @@
-import { StatusBar } from 'expo-status-bar';
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
-import { makeAddSheet } from './src/main/factories/pages/add-sheet/add-sheet-factory';
+import React from "react";
+import AppLoading from "expo-app-loading";
 
+import { Theme } from "./src/presentations/templates";
+import { makeAddSheet } from "./src/main/factories/pages/add-sheet/add-sheet-factory";
+
+import {
+  useFonts,
+  Manrope_300Light,
+  Manrope_500Medium,
+  Manrope_700Bold,
+} from "@expo-google-fonts/manrope";
 
 export default function App() {
-  return makeAddSheet()
-}
+  let [fontsLoaded] = useFonts({
+    Manrope_300Light,
+    Manrope_500Medium,
+    Manrope_700Bold,
+  });
 
-// const styles = StyleSheet.create({
-//   container: {
-//     flex: 1,
-//     backgroundColor: '#fff',
-//     alignItems: 'center',
-//     justifyContent: 'center',
-//   },
-// });
+  if (!fontsLoaded) {
+    return <AppLoading />;
+  }
+
+  return <Theme>{makeAddSheet()}</Theme>;
+}

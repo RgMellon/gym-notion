@@ -11,10 +11,10 @@ export function TrainingSheetCard({ title, image }: TrainingSheetCardProps) {
   return (
     <S.Container>
       <S.ContentImage>
-        <S.Image source={{ uri: image }} />
+        <S.Image testID="image" source={{ uri: image }} />
       </S.ContentImage>
 
-      <S.Title>{title}</S.Title>
+      <S.Title testID="title">{title}</S.Title>
     </S.Container>
   );
 }

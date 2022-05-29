@@ -1,4 +1,4 @@
-import { Model } from "../../domain/usecases/load-sheet";
+import { Model } from "../usecases/load-sheet";
 import faker from "faker";
 
 export const mockRemoteSheetModel = (): Model => ({

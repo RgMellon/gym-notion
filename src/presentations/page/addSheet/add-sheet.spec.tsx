@@ -39,10 +39,10 @@ describe("AddSheetPage", () => {
     await waitFor(() => button)
   });
 
-  it("should render an add button", async () => {
-    const {sut} = makeSut()
-    const button = sut.getByTestId('button')
-    expect(button).toBeTruthy()
-    await waitFor(() => button)
-  });
+  // it("should render an add button", async () => {
+  //   const {sut} = makeSut()
+  //   const button = sut.getByTestId('button')
+  //   expect(button).toBeTruthy()
+  //   await waitFor(() => button)
+  // });
 });

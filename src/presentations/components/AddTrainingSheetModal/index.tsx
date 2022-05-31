@@ -16,6 +16,7 @@ export function AddTrainingSheetModal({
       <S.Content>
         <S.Title>Criar nova ficha</S.Title>
 
+        <S.InputTitle>Nome da ficha:</S.InputTitle>
         <S.Input />
       </S.Content>
     </S.Container>

@@ -28,6 +28,15 @@ export const Title = styled.Text`
     font-family: ${theme.fonts.bold};
     font-size: ${theme.fonts.size.xLarge};
     color: ${theme.colors.text};
+    margin-bottom: 40px;
+  `}
+`;
+
+export const InputTitle = styled.Text`
+  ${({ theme }) => css`
+    font-family: ${theme.fonts.regular};
+    font-size: ${theme.fonts.size.small};
+    color: ${theme.colors.text};
     margin-bottom: 10px;
   `}
 `;
@@ -35,10 +44,12 @@ export const Title = styled.Text`
 export const Input = styled.TextInput`
   ${({ theme }) => css`
     font-family: ${theme.fonts.bold};
-    font-size: ${theme.fonts.size.xLarge};
+    font-size: ${theme.fonts.size.small};
     color: ${theme.colors.text};
 
-    height: 45px;
+    height: 60px;
+    padding: 20px;
+    border-radius: 10px;
     background-color: ${theme.colors.background};
   `}
 `;

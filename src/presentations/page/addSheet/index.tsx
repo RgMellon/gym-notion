@@ -57,6 +57,7 @@ export function AddSheetPage({ addSheet, loadSheet }: Props) {
         <S.ContentTitle>Minhas Fichas</S.ContentTitle>
 
         <AddButton onPress={handleToggleAddTrainingSheetModal} />
+        
         <Modal
           animationType="slide"
           transparent={true}

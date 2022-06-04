@@ -51,5 +51,6 @@ export const Input = styled.TextInput`
     padding: 20px;
     border-radius: 10px;
     background-color: ${theme.colors.background};
+    margin-bottom: 20px;
   `}
 `;

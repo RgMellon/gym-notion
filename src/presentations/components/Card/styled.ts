@@ -26,7 +26,10 @@ export const ContentImage = styled.View`
 `;
 
 export const Image = styled.Image`
-  width: 90px;
-  height: 90px;
-  border-radius: 10px;
+  ${({ theme }) => css`
+    width: 90px;
+    height: 90px;
+    border-radius: 10px;
+    background-color: ${theme.colors.background};
+  `}
 `;

@@ -5,16 +5,22 @@ import { Button } from "../Button";
 import * as S from "./styles";
 
 type AddTrainingSheetModalProps = {
+  isLoading: boolean;
   handleToggleModal: () => void;
+  handleSubmit: (nameSheet: string) => void;
 };
 
 export function AddTrainingSheetModal({
+  isLoading,
   handleToggleModal,
+  handleSubmit
 }: AddTrainingSheetModalProps) {
   const [nameSheet, setNameSheet] = useState('');
 
   function handleClick() {
-    console.log('clicou')
+    if(!nameSheet) return
+
+    handleSubmit(nameSheet)
   }
 
   return (
@@ -27,7 +33,7 @@ export function AddTrainingSheetModal({
         <S.InputTitle>Nome da ficha:</S.InputTitle>
         <S.Input value={nameSheet} onChangeText={setNameSheet}/>
 
-        <Button label="Criar" onPress={handleClick} isDisabled={!nameSheet}/>
+        <Button label="Criar" isLoading={isLoading} onPress={handleClick} isDisabled={!nameSheet}/>
       </S.Content>
     </S.Container>
   );

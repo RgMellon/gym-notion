@@ -1,7 +1,9 @@
 import styled, { css } from "styled-components/native";
+import { ScrollView } from "react-native";
 
-export const Container = styled.ScrollView`
+export const Container = styled.View`
   ${({ theme }) => css`
+    flex: 1;
     background-color: ${theme.colors.background};
     position: relative;
   `}
@@ -23,7 +25,11 @@ export const Detail = styled.View`
   `}
 `;
 
-export const Content = styled.View`
+export const Content = styled(ScrollView).attrs({
+  contentContainerStyle: {
+    paddingBottom: 100
+  }
+})`
   ${({ theme }) => css`
     width: 100%;
     padding-left: 20px;

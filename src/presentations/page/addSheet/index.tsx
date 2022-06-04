@@ -19,6 +19,7 @@ type Props = {
 export function AddSheetPage({ addSheet, loadSheet }: Props) {
   const navigation = useNavigation()
 
+  const [isLoading, setIsLoading] = useState(false);
   const [isOpenModal, setIsOpenModal] = useState(false);
   const [listSheet, setListSheet] = useState<Model[]>([]);
 
@@ -31,14 +32,22 @@ export function AddSheetPage({ addSheet, loadSheet }: Props) {
     getSheets();
   }, []);
 
-  async function handleSubmit() {
+  async function handleSubmit(nameSheet: string) {
     try {
-      const t = await addSheet.add({
-        image: "http://localhost",
-        title: "acorda pedrinho",
-      });
+      setIsLoading(true)
+      const newSheet = {
+        image: "https://img.freepik.com/free-photo/smiling-girl-posing-with-dumbbels-athletic-young-woman-training-yellow-background_197531-25820.jpg?size=626&ext=jpg",
+        title: nameSheet,
+      };
+
+      await addSheet.add(newSheet);
+
+      setListSheet(oldSheet => [...oldSheet, newSheet]);
     } catch (err) {
       alert("error");
+    } finally {
+      setIsLoading(false);
+      handleToggleAddTrainingSheetModal();
     }
   }
 
@@ -60,10 +69,12 @@ export function AddSheetPage({ addSheet, loadSheet }: Props) {
       />
 
       <S.Detail />
+
+      <AddButton onPress={handleToggleAddTrainingSheetModal} />
+      
       <S.Content>
         <S.ContentTitle>Minhas Fichas</S.ContentTitle>
 
-        <AddButton onPress={handleToggleAddTrainingSheetModal} />
         
         <Modal
           animationType="slide"
@@ -72,7 +83,9 @@ export function AddSheetPage({ addSheet, loadSheet }: Props) {
           onRequestClose={handleToggleAddTrainingSheetModal}
         >
           <AddTrainingSheetModal
+            isLoading={isLoading}
             handleToggleModal={handleToggleAddTrainingSheetModal}
+            handleSubmit={handleSubmit}
           />
         </Modal>
 

@@ -12,7 +12,7 @@ export const Container = styled(TouchableOpacity)`
     align-items: center;
 
     position: absolute;
-    bottom: -80px;
+    bottom: 80px;
     right: 20px;
     z-index: ${theme.layers.alwaysOnTop};
   `}

@@ -10,8 +10,8 @@ export function AddTrainingSheetModal({
   handleToggleModal,
 }: AddTrainingSheetModalProps) {
   return (
-    <S.Container>
-      <S.CloseModal onPress={handleToggleModal} />
+    <S.Container testID="modal-sheet">
+      <S.CloseModal onPress={handleToggleModal} testID="close-modal-sheet" />
 
       <S.Content>
         <S.Title>Criar nova ficha</S.Title>

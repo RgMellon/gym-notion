@@ -3,6 +3,7 @@ import AppLoading from "expo-app-loading";
 
 import { Theme } from "./src/presentations/templates";
 import { makeAddSheet } from "./src/main/factories/pages/add-sheet/add-sheet-factory";
+import { makeExercise } from "./src/main/factories/pages/exercises/exercises-factory";
 
 import {
   useFonts,
@@ -21,6 +22,6 @@ export default function App() {
   if (!fontsLoaded) {
     return <AppLoading />;
   }
+  return <Theme>{makeExercise()}</Theme>;
 
-  return <Theme>{makeAddSheet()}</Theme>;
 }

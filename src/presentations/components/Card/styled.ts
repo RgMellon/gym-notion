@@ -1,6 +1,7 @@
+import { TouchableOpacity } from "react-native";
 import styled, { css } from "styled-components/native";
 
-export const Container = styled.TouchableOpacity`
+export const Container = styled(TouchableOpacity)`
   ${({ theme }) => css`
     width: 100%;
     padding: 14px;

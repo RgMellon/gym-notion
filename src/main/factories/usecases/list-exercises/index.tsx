@@ -3,9 +3,10 @@ import { LoadExercises } from "../../../../domain/usecases/load-exercises";
 import { makeFirebaseSdkClient } from "../../http/firebase-sdk-client.factory";
 
 
-export function makeRemoteListExercises(): LoadExercises  {
+export function makeRemoteListExercises(sheetId: string): LoadExercises  {
+    const url = `exercises?sheetId=${sheetId}`;
     return remoteLoadExercise({
-        url: 'exercises', // TODO : isolar em uma factory
+        url, // TODO : isolar em uma factory
         httpClient: makeFirebaseSdkClient()
     })
 }

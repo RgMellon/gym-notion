@@ -3,6 +3,10 @@ export type Params = {
     image: string;
 }
 
+export type Response = {
+    id: string
+}
+
 export interface AddSheet {
-    add:(params: Params) => void
+    add:(params: Params) => Promise<Response>
 }

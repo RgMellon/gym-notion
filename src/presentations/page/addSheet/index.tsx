@@ -10,6 +10,7 @@ import { AddTrainingSheetModal } from "../../components/AddTrainingSheetModal";
 
 import * as S from "./styles";
 import { useNavigation } from "@react-navigation/native";
+import { Load } from "../../components/Load";
 
 type Props = {
   loadSheet: LoadSheet;
@@ -40,9 +41,10 @@ export function AddSheetPage({ addSheet, loadSheet }: Props) {
         title: nameSheet,
       };
 
-      await addSheet.add(newSheet);
+      const id = await addSheet.add(newSheet);
+      
 
-      setListSheet(oldSheet => [...oldSheet, newSheet]);
+      setListSheet(oldSheet => [...oldSheet, {...newSheet, id}]);
     } catch (err) {
       alert("error");
     } finally {
@@ -56,9 +58,12 @@ export function AddSheetPage({ addSheet, loadSheet }: Props) {
     setIsOpenModal(!isOpenModal);
   }
 
-  function handleRedirect() {
-    navigation.navigate('Exercises')
+  function handleRedirect(sheetId) {
+    navigation.navigate('Exercises', {
+      sheetId,
+    })
   }
+
 
   return (
     <S.Container>
@@ -90,7 +95,7 @@ export function AddSheetPage({ addSheet, loadSheet }: Props) {
         </Modal>
 
         {listSheet.map((sheet) => (
-          <Card key={sheet.title} title={sheet.title} image={sheet.image} onPress={handleRedirect} />
+          <Card key={sheet.title} title={sheet.title} image={sheet.image} onPress={() => {handleRedirect(sheet.id)}} />
         ))}
       </S.Content>
     </S.Container>

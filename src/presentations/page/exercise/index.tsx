@@ -1,12 +1,10 @@
+import { useRoute } from "@react-navigation/native";
 import { ResizeMode, Video } from "expo-av";
 import React, { useEffect, useRef, useState } from "react";
 import { Modal, TouchableOpacity, View } from "react-native";
 import { AddExercise } from "../../../domain/usecases";
 import { ExerciseModel, LoadExercises } from "../../../domain/usecases/load-exercises";
 import { Card } from "../../components/Card";
-
-
-
 
 import * as S from "./styles";
 
@@ -16,10 +14,16 @@ type Props = {
     addExercise: AddExercise
 };
 
+type RouteParams = {
+  sheetId: string
+}
+
 export function Exercise({ loadExercises}: Props) {
+    const { params } = useRoute()
+    const routeParams = params as RouteParams;
 
     const playerRef = useRef();
-
+    
     const [listExercises, setListExercises] = useState<ExerciseModel[]>([]);
     const [currentVideo, setCurrentVideo] = useState('')
     const [load, setLoad] = useState(true);

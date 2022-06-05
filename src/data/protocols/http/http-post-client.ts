@@ -3,6 +3,10 @@ export type HttpPostParams = {
   body?: any
 }
 
+export type HttpPostResponse = {
+  id: string
+}
+
 export interface HttpPostClient {
-  post: (params: HttpPostParams) => Promise<void>
+  post: (params: HttpPostParams) => Promise<HttpPostResponse>
 }

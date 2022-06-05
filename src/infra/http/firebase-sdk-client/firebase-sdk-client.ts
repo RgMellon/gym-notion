@@ -11,19 +11,38 @@ export function firebaseSdkClient(): Client  {
     return {
         async post(params: HttpPostParams) {
             try {
-                await firestore().collection(params.url).add(params.body)
+                const response = await firestore().collection(params.url).add(params.body);
+                
+                return {
+                    id: response.id
+                }
             } catch(err)   {
                 console.log(err)
             }
         },
 
         async get(params: HttpPostParams): Promise<HttpResponse> {
+            const [url, param] = params.url.split('?')
+            
             try {
-                const response = await firestore().collection(params.url).get()
+                let response;
+
+                if(!!param)  {
+                  const [_, id] = param.split('=')
+                  response =  await firestore().collection(url).where('sheet_id', '==', id).get()
+                  
+                } else {
+                    response =  await firestore().collection(url).get()
+                }
                 
                 return {
                     statusCode: 200,
-                    body: response.docs.map(doc => doc.data())
+                    body: response.docs.map(doc => {
+                        return {
+                            id: doc.id,
+                            ...doc.data()
+                        }
+                    })
                 }
 
             } catch(err)   {

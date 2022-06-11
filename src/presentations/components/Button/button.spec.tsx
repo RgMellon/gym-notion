@@ -4,7 +4,7 @@ import { Button } from ".";
 
 describe("Button", () => {
     it("should render the button with correct label", () => {
-        const { getByTestId } = render(<Button label="Criar" isDisabled={true}/>);
+        const { getByTestId } = render(<Button label="Criar" isDisabled={true} isLoading={false}/>);
   
         const button = getByTestId("button");
 
@@ -16,7 +16,7 @@ describe("Button", () => {
     it("should render the button disable by default", () => {
         const onPress = jest.fn();
 
-        const { getByTestId } = render(<Button label="Criar" isDisabled={true} onPress={onPress}/>);
+        const { getByTestId } = render(<Button label="Criar" isDisabled={true} onPress={onPress} isLoading={false}/>);
   
         const button = getByTestId("button");
 
@@ -30,7 +30,7 @@ describe("Button", () => {
     it("should be able to click when is disabled was false", () => {
         const onPress = jest.fn();
 
-        const { getByTestId } = render(<Button label="Criar" isDisabled={false} onPress={onPress}/>);
+        const { getByTestId } = render(<Button label="Criar" isDisabled={false} onPress={onPress} isLoading={false} />);
   
         const button = getByTestId("button");
 

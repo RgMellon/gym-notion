@@ -54,7 +54,6 @@ export function AddSheetPage({ addSheet, loadSheet }: Props) {
   }
 
   function handleToggleAddTrainingSheetModal() {
-    console.log(isOpenModal);
     setIsOpenModal(!isOpenModal);
   }
 

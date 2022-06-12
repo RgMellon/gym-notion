@@ -7,7 +7,7 @@ import * as S from "./styles";
 
 export function Load() {
   return (
-    <S.Container>
+    <S.Container testID="load">
       <LottieView
         testID="load-animation"
         autoPlay

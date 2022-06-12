@@ -39,14 +39,17 @@ describe('RemoteLoadSurveyList', () => {
     const sheetList = await sut.load()
 
     expect(sheetList).toEqual([{
+      id:httpResult[0].id, 
       image: httpResult[0].image,
       title: httpResult[0].title
     },
     {
+      id:httpResult[1].id, 
       image: httpResult[1].image,
       title: httpResult[1].title
     },
     {
+      id:httpResult[2].id, 
       image: httpResult[2].image,
       title: httpResult[2].title
     }])

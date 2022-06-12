@@ -11,7 +11,7 @@ type Props = {
 
 export function Empty({children}: Props) {
   return (
-    <S.Container>
+    <S.Container  testID="empty">
         <S.Detail>
             <S.IconWrapper
                 testID="load-animation"

@@ -13,6 +13,12 @@ import {
 import { NavigationContainer } from "@react-navigation/native";
 import AppRoutes from "./src/routes";
 
+import {LogBox} from "react-native";
+
+LogBox.ignoreLogs([
+"exported from 'deprecated-react-native-prop-types'.",
+])
+
 export default function App() {
   let [fontsLoaded] = useFonts({
     Manrope_300Light,

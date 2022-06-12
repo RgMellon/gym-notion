@@ -1,7 +1,6 @@
 import { useRoute } from "@react-navigation/native";
-import { ResizeMode, Video } from "expo-av";
 import React, { useEffect, useRef, useState } from "react";
-import { Modal, TouchableOpacity, View } from "react-native";
+import { Modal } from "react-native";
 import { AddExercise } from "../../../domain/usecases";
 import { ExerciseModel, LoadExercises } from "../../../domain/usecases/load-exercises";
 import { AddButton } from "../../components/AddButton";
@@ -83,39 +82,41 @@ export function Exercise({ loadExercises, addExercise}: Props) {
     
     return <>
       {load ? <Load /> : 
-      <>
-        {listExercises.length === 0 && !load  ? <Empty >
-          <Button style={{borderRadius: 200, width: 250 }} label="Adicionar novo exercicío" isLoading={false} isDisabled={false}  onPress={handleToggleModal}/>
-        </Empty>
-        :<S.Container>
-          <AddButton onPress={handleToggleModal} />
-          <S.VideoPlayer
-            ref={playerRef}
-            height={250}
-            videoId={currentVideo}
-          />
-          <S.Content>
-            <S.ContentTitle>Meus exercicios</S.ContentTitle>
-            {listExercises.map((exercise) => (
-              <Card onPress={() => {handleSelectExercise(exercise)}} title={exercise.title} image={exercise.image} />
-            ))}
-          </S.Content>
-        </S.Container>}
-      </>
+        <>
+          {listExercises.length === 0 && !load 
+          ? 
+            <Empty >
+              <Button style={{borderRadius: 200, width: 250 }} label="Adicionar novo exercicío" isLoading={false} isDisabled={false}  onPress={handleToggleModal}/>
+            </Empty>
+          : <S.Container>
+              <AddButton onPress={handleToggleModal} />
+              <S.VideoPlayer
+                ref={playerRef}
+                height={250}
+                videoId={currentVideo}
+              />
+              <S.Content>
+                <S.ContentTitle>Meus exercicios</S.ContentTitle>
+                {listExercises.map((exercise) => (
+                  <Card key={exercise.video} onPress={() => {handleSelectExercise(exercise)}} title={exercise.title} image={exercise.image} />
+                ))}
+              </S.Content>
+            </S.Container>}
+        </>
       }
 
-      <Modal
-        animationType="slide"
-        transparent={true}
-        visible={isOpenModal}
-        onRequestClose={()=>{}}
-      > 
-        <AddExerciseModal
-            isLoading={false}
-            handleToggleModal={handleToggleModal}
-            handleSubmit={handleSubmit}
+        <Modal
+          animationType="slide"
+          transparent={true}
+          visible={isOpenModal}
+          onRequestClose={()=>{}}
+        > 
+          <AddExerciseModal
+              isLoading={false}
+              handleToggleModal={handleToggleModal}
+              handleSubmit={handleSubmit}
           />        
-      </Modal>
+        </Modal>
     </>
 };
 

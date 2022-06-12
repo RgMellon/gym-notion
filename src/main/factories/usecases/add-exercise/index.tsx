@@ -6,7 +6,7 @@ import { makeFirebaseSdkClient } from "../../http/firebase-sdk-client.factory";
 
 export function makeRemoteAddExercise(): AddExercise  {
     return remoteAddExercise({
-        url: 'exercise',
+        url: 'exercises',
         httpClient: makeFirebaseSdkClient()
     })
 }
